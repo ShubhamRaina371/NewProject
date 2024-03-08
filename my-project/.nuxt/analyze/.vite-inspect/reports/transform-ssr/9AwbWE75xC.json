@@ -1,0 +1,276 @@
+{
+  "resolvedId": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue?vue&type=style&index=0&scoped=faff6db1&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\r\n  .status {\r\n    border: 1px solid #ccc;\r\n    padding: 10px;\r\n    margin: 10px;\r\n  }\r\n  \r\n  .tasks {\r\n    margin-top: 10px;\r\n  }\r\n  \r\n  .to-do {\r\n    color: #ef2e2e; /* Red */\r\n  }\r\n  \r\n  .in-progress {\r\n    color: #c9c91f; /* Yellow */\r\n  }\r\n  button{\r\nbackground-color: #4CAF50;\r\n  color: white;\r\n  padding: 12px 20px;\r\n  border: none;\r\n  border-radius: 5px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  }\r\n  \r\n  .done {\r\n    color: #5f9f5f; /* Green */\r\n  }\r\n  ",
+      "start": 1709911567008,
+      "end": 1709911567008,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue"
+        ],
+        "names": [],
+        "mappings": ";EA4BE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;IACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;IACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACd;;EAEA,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EAClB;;EAEA,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACL,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC;EAC1B;;EAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACX,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EAC7B;EACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACvB,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;EAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACf;;EAEA,CAAC,CAAC,CAAC,CAAC,EAAE;IACJ,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EAC5B",
+        "file": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\r\n    <div :class=\"'status ' + status.color\">\r\n      <h2>{{ status.title }} ({{ status.tasks.length }})</h2>\r\n      <div class=\"tasks\">\r\n        <task-card v-for=\"task in status.tasks\" :key=\"task.id\" :task=\"task\" />\r\n      </div>\r\n      <button @click=\"addTask\">New</button>\r\n    </div>\r\n  </template>\r\n  \r\n  <script>\r\n  import TaskCard from '~/components/TaskCard.vue';\r\n  \r\n  export default {\r\n    components: {\r\n      TaskCard\r\n    },\r\n    props: ['status'],\r\n    methods: {\r\n      addTask() {\r\n        const newTask = { id: Date.now(), title: 'New Task', description: '', status: this.status.title };\r\n        this.status.tasks.push(newTask);\r\n      }\r\n    }\r\n  };\r\n  </script>\r\n  \r\n  <style scoped>\r\n  .status {\r\n    border: 1px solid #ccc;\r\n    padding: 10px;\r\n    margin: 10px;\r\n  }\r\n  \r\n  .tasks {\r\n    margin-top: 10px;\r\n  }\r\n  \r\n  .to-do {\r\n    color: #ef2e2e; /* Red */\r\n  }\r\n  \r\n  .in-progress {\r\n    color: #c9c91f; /* Yellow */\r\n  }\r\n  button{\r\nbackground-color: #4CAF50;\r\n  color: white;\r\n  padding: 12px 20px;\r\n  border: none;\r\n  border-radius: 5px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  }\r\n  \r\n  .done {\r\n    color: #5f9f5f; /* Green */\r\n  }\r\n  </style>\r\n  "
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911567008,
+      "end": 1709911567008,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911567008,
+      "end": 1709911567008,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911567008,
+      "end": 1709911567008,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911567008,
+      "end": 1709911567008,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1709911567008,
+      "end": 1709911567008,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".status{border:1px solid #ccc;margin:10px;padding:10px}.tasks{margin-top:10px}.to-do{color:#ef2e2e}.in-progress{color:#c9c91f}button{background-color:#4caf50;border:none;border-radius:5px;color:#fff;cursor:pointer;font-size:16px;padding:12px 20px}.done{color:#5f9f5f}",
+      "start": 1709911567008,
+      "end": 1709911567016,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue",
+        "mappings": "AACE,QACE,qBAAsB,CAEtB,WAAY,CADZ,YAEF,CAEA,OACE,eACF,CAEA,OACE,aACF,CAEA,aACE,aACF,CACA,OACF,wBAAyB,CAGvB,WAAY,CACZ,iBAAkB,CAHlB,UAAY,CAKZ,cAAe,CADf,cAAe,CAHf,iBAKA,CAEA,MACE,aACF",
+        "names": [],
+        "sources": [
+          "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue"
+        ],
+        "sourcesContent": [
+          "\r\n  .status {\r\n    border: 1px solid #ccc;\r\n    padding: 10px;\r\n    margin: 10px;\r\n  }\r\n  \r\n  .tasks {\r\n    margin-top: 10px;\r\n  }\r\n  \r\n  .to-do {\r\n    color: #ef2e2e; /* Red */\r\n  }\r\n  \r\n  .in-progress {\r\n    color: #c9c91f; /* Yellow */\r\n  }\r\n  button{\r\nbackground-color: #4CAF50;\r\n  color: white;\r\n  padding: 12px 20px;\r\n  border: none;\r\n  border-radius: 5px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  }\r\n  \r\n  .done {\r\n    color: #5f9f5f; /* Green */\r\n  }\r\n  "
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1709911567016,
+      "end": 1709911567016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1709911567016,
+      "end": 1709911567016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1709911567016,
+      "end": 1709911567016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".status[data-v-faff6db1]{border:1px solid #ccc;margin:10px;padding:10px}.tasks[data-v-faff6db1]{margin-top:10px}.to-do[data-v-faff6db1]{color:#ef2e2e}.in-progress[data-v-faff6db1]{color:#c9c91f}button[data-v-faff6db1]{background-color:#4caf50;border:none;border-radius:5px;color:#fff;cursor:pointer;font-size:16px;padding:12px 20px}.done[data-v-faff6db1]{color:#5f9f5f}",
+      "start": 1709911567016,
+      "end": 1709911567017,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue",
+        "mappings": "AAAA,yBAAQ,qBAAqB,CAAC,WAAW,CAAC,YAAY,CAAC,wBAAO,eAAe,CAAC,wBAAO,aAAa,CAAC,8BAAa,aAAa,CAAC,wBAAO,wBAAwB,CAAC,WAAW,CAAC,iBAAiB,CAAC,UAAU,CAAC,cAAc,CAAC,cAAc,CAAC,iBAAiB,CAAC,uBAAM,aAAa",
+        "names": [],
+        "sources": [
+          "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1709911567017,
+      "end": 1709911567017,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911567017,
+      "end": 1709911567017,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911567017,
+      "end": 1709911567017,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911567017,
+      "end": 1709911567017,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911567017,
+      "end": 1709911567017,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1709911567017,
+      "end": 1709911567017,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911567017,
+      "end": 1709911567018,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1709911567018,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911567019,
+      "end": 1709911567019,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1709911567020,
+      "end": 1709911567020,
+      "order": "normal"
+    }
+  ]
+}

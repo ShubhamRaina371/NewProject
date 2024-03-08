@@ -1,0 +1,203 @@
+{
+  "resolvedId": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n    <div :class=\"'status ' + status.color\">\r\n      <h2>{{ status.title }} ({{ status.tasks.length }})</h2>\r\n      <div class=\"tasks\">\r\n        <task-card v-for=\"task in status.tasks\" :key=\"task.id\" :task=\"task\" />\r\n      </div>\r\n      <button @click=\"addTask\">New</button>\r\n    </div>\r\n  </template>\r\n  \r\n  <script>\r\n  import TaskCard from '~/components/TaskCard.vue';\r\n  \r\n  export default {\r\n    components: {\r\n      TaskCard\r\n    },\r\n    props: ['status'],\r\n    methods: {\r\n      addTask() {\r\n        const newTask = { id: Date.now(), title: 'New Task', description: '', status: this.status.title };\r\n        this.status.tasks.push(newTask);\r\n      }\r\n    }\r\n  };\r\n  </script>\r\n  \r\n  <style scoped>\r\n  .status {\r\n    border: 1px solid #ccc;\r\n    padding: 10px;\r\n    margin: 10px;\r\n  }\r\n  \r\n  .tasks {\r\n    margin-top: 10px;\r\n  }\r\n  \r\n  .to-do {\r\n    color: #ef2e2e; /* Red */\r\n  }\r\n  \r\n  .in-progress {\r\n    color: #c9c91f; /* Yellow */\r\n  }\r\n  button{\r\nbackground-color: #4CAF50;\r\n  color: white;\r\n  padding: 12px 20px;\r\n  border: none;\r\n  border-radius: 5px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  }\r\n  \r\n  .done {\r\n    color: #5f9f5f; /* Green */\r\n  }\r\n  </style>\r\n  ",
+      "start": 1709911565048,
+      "end": 1709911565119,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1709911565119,
+      "end": 1709911565119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\r\n  import TaskCard from '~/components/TaskCard.vue';\r\n  \r\n  const _sfc_main = {\r\n    components: {\r\n      TaskCard\r\n    },\r\n    props: ['status'],\r\n    methods: {\r\n      addTask() {\r\n        const newTask = { id: Date.now(), title: 'New Task', description: '', status: this.status.title };\r\n        this.status.tasks.push(newTask);\r\n      }\r\n    }\r\n  };\r\n  \nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, normalizeClass as _normalizeClass, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-faff6db1\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"tasks\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_task_card = _resolveComponent(\"task-card\")\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: _normalizeClass('status ' + $props.status.color)\n  }, [\n    _createElementVNode(\"h2\", null, _toDisplayString($props.status.title) + \" (\" + _toDisplayString($props.status.tasks.length) + \")\", 1),\n    _createElementVNode(\"div\", _hoisted_1, [\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($props.status.tasks, (task) => {\n        return (_openBlock(), _createBlock(_component_task_card, {\n          key: task.id,\n          task: task\n        }, null, 8, [\"task\"]))\n      }), 128))\n    ]),\n    _createElementVNode(\"button\", {\n      onClick: _cache[0] || (_cache[0] = (...args) => ($options.addTask && $options.addTask(...args)))\n    }, \"New\")\n  ], 2))\n}\n\nimport \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue?vue&type=style&index=0&scoped=faff6db1&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-faff6db1\"]])",
+      "start": 1709911565119,
+      "end": 1709911565124,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911565124,
+      "end": 1709911565124,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911565124,
+      "end": 1709911565126,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911565126,
+      "end": 1709911565126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1709911565126,
+      "end": 1709911565126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskCard.vue\";\n\r\n  import TaskCard from '~/components/TaskCard.vue';\r\n  \r\n  const _sfc_main = {\r\n    components: {\r\n      TaskCard\r\n    },\r\n    props: ['status'],\r\n    methods: {\r\n      addTask() {\r\n        const newTask = { id: Date.now(), title: 'New Task', description: '', status: this.status.title };\r\n        this.status.tasks.push(newTask);\r\n      }\r\n    }\r\n  };\r\n  \nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, normalizeClass as _normalizeClass, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-faff6db1\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"tasks\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_task_card = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: _normalizeClass('status ' + $props.status.color)\n  }, [\n    _createElementVNode(\"h2\", null, _toDisplayString($props.status.title) + \" (\" + _toDisplayString($props.status.tasks.length) + \")\", 1),\n    _createElementVNode(\"div\", _hoisted_1, [\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($props.status.tasks, (task) => {\n        return (_openBlock(), _createBlock(_component_task_card, {\n          key: task.id,\n          task: task\n        }, null, 8, [\"task\"]))\n      }), 128))\n    ]),\n    _createElementVNode(\"button\", {\n      onClick: _cache[0] || (_cache[0] = (...args) => ($options.addTask && $options.addTask(...args)))\n    }, \"New\")\n  ], 2))\n}\n\nimport \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue?vue&type=style&index=0&scoped=faff6db1&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-faff6db1\"]])",
+      "start": 1709911565126,
+      "end": 1709911565127,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1709911565127,
+      "end": 1709911565127,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1709911565127,
+      "end": 1709911565127,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1709911565127,
+      "end": 1709911565127,
+      "order": "normal"
+    }
+  ]
+}

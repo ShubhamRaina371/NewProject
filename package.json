@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.11.4"
+  },
+  "dependencies": {
+    "vue-draggable": "^2.0.6",
+    "vuedraggable": "^2.24.3"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "resolvedId": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/app.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "app.vue------------\n\n<template>\n  <div>\n    <h1>Project AirTribe</h1>\n    <task-status v-for=\"status in statuses\" :key=\"status.id\" :status=\"status\" :statuses=\"statuses\" @update-task=\"updateTask\" @delete-task=\"deleteTask\" />\n    <router-view />\n  </div>\n</template>\n\n<script>\nimport TaskStatus from '~/components/TaskStatus.vue';\nimport TaskDetails from '~/components/TaskDetails.vue';\nimport TaskCard from '~/components/TaskCard.vue';\n\nexport default {\n  components: {\n    TaskStatus,\n    TaskDetails,\n    TaskCard\n  },\n  data() {\n    return {\n      statuses: [\n        { id: 1, title: 'To Do', tasks: [], color: 'to-do' },\n        { id: 2, title: 'In Progress', tasks: [], color: 'in-progress' },\n        { id: 3, title: 'Completed', tasks: [], color: 'done' }\n      ]\n    };\n  },\n  \n};\n</script>\n\n<style>\n/* Add your styles here */\n</style>\n",
+      "start": 1709911564917,
+      "end": 1709911565011,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1709911565011,
+      "end": 1709911565011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport TaskStatus from '~/components/TaskStatus.vue';\nimport TaskDetails from '~/components/TaskDetails.vue';\nimport TaskCard from '~/components/TaskCard.vue';\n\nconst _sfc_main = {\n  components: {\n    TaskStatus,\n    TaskDetails,\n    TaskCard\n  },\n  data() {\n    return {\n      statuses: [\n        { id: 1, title: 'To Do', tasks: [], color: 'to-do' },\n        { id: 2, title: 'In Progress', tasks: [], color: 'in-progress' },\n        { id: 3, title: 'Completed', tasks: [], color: 'done' }\n      ]\n    };\n  },\n  \n};\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createVNode as _createVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h1\", null, \"Project AirTribe\", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_task_status = _resolveComponent(\"task-status\")\n  const _component_router_view = _resolveComponent(\"router-view\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _hoisted_1,\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.statuses, (status) => {\n      return (_openBlock(), _createBlock(_component_task_status, {\n        key: status.id,\n        status: status,\n        statuses: $data.statuses,\n        onUpdateTask: _ctx.updateTask,\n        onDeleteTask: _ctx.deleteTask\n      }, null, 8, [\"status\", \"statuses\", \"onUpdateTask\", \"onDeleteTask\"]))\n    }), 128)),\n    _createVNode(_component_router_view)\n  ]))\n}\n\nimport \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/app.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1709911565011,
+      "end": 1709911565024,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911565024,
+      "end": 1709911565024,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911565024,
+      "end": 1709911565025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911565025,
+      "end": 1709911565025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1709911565025,
+      "end": 1709911565025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskStatus.vue\";\n\nimport TaskStatus from '~/components/TaskStatus.vue';\nimport TaskDetails from '~/components/TaskDetails.vue';\nimport TaskCard from '~/components/TaskCard.vue';\n\nconst _sfc_main = {\n  components: {\n    TaskStatus,\n    TaskDetails,\n    TaskCard\n  },\n  data() {\n    return {\n      statuses: [\n        { id: 1, title: 'To Do', tasks: [], color: 'to-do' },\n        { id: 2, title: 'In Progress', tasks: [], color: 'in-progress' },\n        { id: 3, title: 'Completed', tasks: [], color: 'done' }\n      ]\n    };\n  },\n  \n};\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, createVNode as _createVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h1\", null, \"Project AirTribe\", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_task_status = __nuxt_component_0\n  const _component_router_view = _resolveComponent(\"router-view\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _hoisted_1,\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.statuses, (status) => {\n      return (_openBlock(), _createBlock(_component_task_status, {\n        key: status.id,\n        status: status,\n        statuses: $data.statuses,\n        onUpdateTask: _ctx.updateTask,\n        onDeleteTask: _ctx.deleteTask\n      }, null, 8, [\"status\", \"statuses\", \"onUpdateTask\", \"onDeleteTask\"]))\n    }), 128)),\n    _createVNode(_component_router_view)\n  ]))\n}\n\nimport \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/app.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1709911565025,
+      "end": 1709911565026,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1709911565026,
+      "end": 1709911565026,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1709911565026,
+      "end": 1709911565026,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1709911565026,
+      "end": 1709911565026,
+      "order": "normal"
+    }
+  ]
+}

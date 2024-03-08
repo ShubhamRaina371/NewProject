@@ -1,0 +1,247 @@
+{
+  "resolvedId": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "TaskCard.vue-------------\r\n<template>\r\n    <router-link :to=\"'/task/' + task.id\">\r\n      <div class=\"task\" draggable=\"true\" @dragstart=\"dragStart\">\r\n        <h3>{{ task.title }}</h3>\r\n      </div>\r\n    </router-link>\r\n  </template>\r\n  \r\n  <script>\r\n  export default {\r\n    props: ['task'],\r\n    methods: {\r\n      dragStart(event) {\r\n        event.dataTransfer.setData('text/plain', JSON.stringify(this.task));\r\n      }\r\n    }\r\n  };\r\n  </script>\r\n  \r\n  <style scoped>\r\n  .task {\r\n    background-color: #f0f0f0;\r\n    border: 1px solid #cbcbcb;\r\n    padding: 10px;\r\n    margin-bottom: 5px;\r\n    cursor: pointer;\r\n  }\r\n  </style>\r\n  ",
+      "start": 1709911566815,
+      "end": 1709911566897,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1709911566897,
+      "end": 1709911566897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\r\n  const _sfc_main = {\r\n    props: ['task'],\r\n    methods: {\r\n      dragStart(event) {\r\n        event.dataTransfer.setData('text/plain', JSON.stringify(this.task));\r\n      }\r\n    }\r\n  };\r\n  \nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, toDisplayString as _toDisplayString, createVNode as _createVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n  const _component_router_link = _resolveComponent(\"router-link\")\n\n  _push(_ssrRenderComponent(_component_router_link, _mergeProps({\n    to: '/task/' + $props.task.id\n  }, _attrs), {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"task\" draggable=\"true\" data-v-9efd186a${\n          _scopeId\n        }><h3 data-v-9efd186a${\n          _scopeId\n        }>${\n          _ssrInterpolate($props.task.title)\n        }</h3></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", {\n            class: \"task\",\n            draggable: \"true\",\n            onDragstart: $options.dragStart\n          }, [\n            _createVNode(\"h3\", null, _toDisplayString($props.task.title), 1)\n          ], 40, [\"onDragstart\"])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n}\n\nimport \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskCard.vue?vue&type=style&index=0&scoped=9efd186a&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/TaskCard.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-9efd186a\"]])",
+      "start": 1709911566897,
+      "end": 1709911566902,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskCard.vue",
+        "names": [],
+        "sources": [
+          "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskCard.vue"
+        ],
+        "sourcesContent": [
+          "TaskCard.vue-------------\r\n<template>\r\n    <router-link :to=\"'/task/' + task.id\">\r\n      <div class=\"task\" draggable=\"true\" @dragstart=\"dragStart\">\r\n        <h3>{{ task.title }}</h3>\r\n      </div>\r\n    </router-link>\r\n  </template>\r\n  \r\n  <script>\r\n  export default {\r\n    props: ['task'],\r\n    methods: {\r\n      dragStart(event) {\r\n        event.dataTransfer.setData('text/plain', JSON.stringify(this.task));\r\n      }\r\n    }\r\n  };\r\n  </script>\r\n  \r\n  <style scoped>\r\n  .task {\r\n    background-color: #f0f0f0;\r\n    border: 1px solid #cbcbcb;\r\n    padding: 10px;\r\n    margin-bottom: 5px;\r\n    cursor: pointer;\r\n  }\r\n  </style>\r\n  "
+        ],
+        "mappings": ";EAUE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACb,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;QACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MACrE;IACF;EACF,CAAC;;;;;;;;EAjBH,MAAA,4CAAA;IAEkB,EAAE,aAAa,WAAI,CAAC,EAAE;KAFxC;IAAA,kBAEI,CAIc;UANlB;QAAA;UAAA;;UAAA;;UAAA,gBAIe,WAAI,CAAC,KAAK;;;;UADnB,aAEM;YAFD,KAAK,EAAC,MAAM;YAAC,SAAS,EAAC,MAAM;YAAE,WAAS,EAAE,kBAAS;;YACtD,aAAyB,6BAAlB,WAAI,CAAC,KAAK;;;;;IAJzB,GAAA"
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911566902,
+      "end": 1709911566902,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1709911566902,
+      "end": 1709911566906,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1709911566906,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911566907,
+      "end": 1709911566907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911566907,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911566907,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1709911566909,
+      "end": 1709911566909,
+      "order": "normal"
+    }
+  ]
+}

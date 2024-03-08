@@ -1,0 +1,247 @@
+{
+  "resolvedId": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskDetails.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n    <div class=\"details\">\r\n      <h2>Edit Task</h2>\r\n      <input type=\"text\" v-model=\"editedTask.title\" placeholder=\"Title\" />\r\n      <select v-model=\"editedTask.status\">\r\n        <option v-for=\"status in statuses\" :key=\"status.id\">{{ status.title }}</option>\r\n      </select>\r\n      <textarea v-model=\"editedTask.description\" placeholder=\"Description\"></textarea>\r\n      <button @click=\"updateTask\" class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2\">Update</button>\r\n      <button @click=\"deleteTask\" class=\"bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded\">Delete</button>\r\n    </div>\r\n  </template>\r\n  \r\n  <script>\r\n  export default {\r\n    props: ['task', 'statuses'],\r\n    data() {\r\n      return {\r\n        editedTask: {}\r\n      };\r\n    },\r\n    mounted() {\r\n      // Clone the task object to prevent mutation of the original task\r\n      this.editedTask = { ...this.task };\r\n    },\r\n \r\n  };\r\n  </script>\r\n  \r\n  <style scoped>\r\n  .details {\r\n    padding: 20px;\r\n  }\r\n  </style>\r\n  ",
+      "start": 1709911566813,
+      "end": 1709911566862,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1709911566862,
+      "end": 1709911566862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1709911566863,
+      "end": 1709911566863,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1709911566863,
+      "end": 1709911566863,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\r\n  const _sfc_main = {\r\n    props: ['task', 'statuses'],\r\n    data() {\r\n      return {\r\n        editedTask: {}\r\n      };\r\n    },\r\n    mounted() {\r\n      // Clone the task object to prevent mutation of the original task\r\n      this.editedTask = { ...this.task };\r\n    },\r\n \r\n  };\r\n  \nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"details\" }, _attrs))\n  } data-v-4a6e9f60><h2 data-v-4a6e9f60>Edit Task</h2><input type=\"text\"${\n    _ssrRenderAttr(\"value\", $data.editedTask.title)\n  } placeholder=\"Title\" data-v-4a6e9f60><select data-v-4a6e9f60><!--[-->`)\n  _ssrRenderList($props.statuses, (status) => {\n    _push(`<option data-v-4a6e9f60>${_ssrInterpolate(status.title)}</option>`)\n  })\n  _push(`<!--]--></select><textarea placeholder=\"Description\" data-v-4a6e9f60>${_ssrInterpolate($data.editedTask.description)}</textarea><button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2\" data-v-4a6e9f60>Update</button><button class=\"bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded\" data-v-4a6e9f60>Delete</button></div>`)\n}\n\nimport \"C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskDetails.vue?vue&type=style&index=0&scoped=4a6e9f60&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/TaskDetails.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-4a6e9f60\"]])",
+      "start": 1709911566863,
+      "end": 1709911566874,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskDetails.vue",
+        "names": [],
+        "sources": [
+          "C:/Users/shubh/OneDrive/Documents/PROJECTS/my-project/components/TaskDetails.vue"
+        ],
+        "sourcesContent": [
+          "<template>\r\n    <div class=\"details\">\r\n      <h2>Edit Task</h2>\r\n      <input type=\"text\" v-model=\"editedTask.title\" placeholder=\"Title\" />\r\n      <select v-model=\"editedTask.status\">\r\n        <option v-for=\"status in statuses\" :key=\"status.id\">{{ status.title }}</option>\r\n      </select>\r\n      <textarea v-model=\"editedTask.description\" placeholder=\"Description\"></textarea>\r\n      <button @click=\"updateTask\" class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2\">Update</button>\r\n      <button @click=\"deleteTask\" class=\"bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded\">Delete</button>\r\n    </div>\r\n  </template>\r\n  \r\n  <script>\r\n  export default {\r\n    props: ['task', 'statuses'],\r\n    data() {\r\n      return {\r\n        editedTask: {}\r\n      };\r\n    },\r\n    mounted() {\r\n      // Clone the task object to prevent mutation of the original task\r\n      this.editedTask = { ...this.task };\r\n    },\r\n \r\n  };\r\n  </script>\r\n  \r\n  <style scoped>\r\n  .details {\r\n    padding: 20px;\r\n  }\r\n  </style>\r\n  "
+        ],
+        "mappings": ";EAcE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACb,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACL,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;QACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;MACf,CAAC;IACH,CAAC;IACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACR,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;MAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;IACpC,CAAC;;EAEH,CAAC;;;;;;EA1BH;IAAA,gBAAA,cACS,KAAK,EAAC,SAAS,IADxB;;IAAA,eAAA,SAGkC,gBAAU,CAAC,KAAK;;EAHlD,eAKiC,eAAQ,EALzC,CAKuB,MAAM;IAL7B,iCAAA,gBAK+D,MAAM,CAAC,KAAK;;EAL3E,8EAAA,gBAOyB,gBAAU,CAAC,WAAW"
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1709911566875,
+      "end": 1709911566875,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1709911566875,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1709911566879,
+      "end": 1709911566879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911566879,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1709911566879,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911566880,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1709911566880,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1709911566880,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1709911566880,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1709911566880,
+      "end": 1709911566880,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1709911566881,
+      "end": 1709911566881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1709911566881,
+      "end": 1709911566881,
+      "order": "normal"
+    }
+  ]
+}
